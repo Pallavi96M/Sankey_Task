@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset ="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="log.js"></script>
+    </head>
+    <body>
+        <div class="title"><h4>Login form1</h4></div>
+        <div class="container">
+            <div class ="left"></div>
+            <div class ="right">
+                <div class ="formBox">
+                    <h3>Welcome Back</h3>
+                    <h2>Login to your account</h2>
+                    <form  name="loginform" action="welcome.html">
+                        <input  type="text" name="user_name" placeholder="Email"/>
+                        <input  type="password" name="pass_word" placeholder="password"/>
+                        <input  type="button" value="login"  onclick="login()"/>
+                      </form>
+                      <script>
+                        function login(){
+                              var user = document.loginform.user_name.value;
+                              var pass = document.loginform.pass_word.value;
+                        if(user == "" || pass == ""){
+                                alert("sorry...Please Enter Username and Passowrd");
+                           }else{
+                        if((user == "ustut" || user == "USTUT") && pass == "US@123"){
+                                document.loginform.submit();
+                          }else{
+                               alert("Please Enter Correct Credentials");
+                        }
+                             }
+                                 }
+                      </script>
+                        <input type="Submit" name="" value="Or sign in with Google">
+                        <a href="#">Forget Password</a>
+                        <a href="#">&nbsp;&nbsp;Remember Me</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>    
+</html>
